@@ -1,0 +1,9 @@
+=== Installing Golo
+
+http://golo-lang.org/download/
+
+==== From source
+
+==== On macOS
+
+==== On Windows

@@ -1,0 +1,40 @@
+
+=== JDB
+
+As a JVM-base language, Golo can be debugged using the usual java facilities.
+
+For instance, one can use a JDWP agent to inspect a Golo program while running.
+
+[source,bash]
+----
+$ export GOLO_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,address=6666,suspend=y"
+$ golo golo --files mymodule.golo
+----
+
+The `golo-debug` command can be used in place of `golo` to run the program with these options, as well as with the `golo.debug` property set.
+[source,bash]
+----
+$ golo-debug golo --files mymodule.golo
+----
+
+or 
+
+[source,bash]
+----
+$ golo compile mymodule.golo
+$ golo-debug run --module MyModule
+----
+
+In another terminal, running
+
+[source,bash]
+----
+$ rlwrap jdb -sourcepath . -attach 6666
+----
+
+will drop you in the command-line debugger that allows inspection and debugging of your Golo program. You can use `jdb` to run Golo programs step-by-step, set breakpoint and inspect program state.
+
+[NOTE]
+The `rlwrap` command is just a wrapper around the readline library. It provides line editing and history of commands, which can be very convenient.
+
+

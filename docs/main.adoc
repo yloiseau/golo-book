@@ -16,3 +16,4 @@ include::errors/main.adoc[]
 include::concurrency/main.adoc[]
 
 include::testing/main.adoc[]
+include::debugging/main.adoc[]
