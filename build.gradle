@@ -18,8 +18,8 @@ asciidoctor {
   separateOutputDirs false
 }
 
-task doc(dependsOn: [asciidoctor]) {
-  description = 'Generates all the documentations.'
+task book(dependsOn: [asciidoctor]) {
+  description = 'Generates the book.'
   group = 'Documentation'
 }
 
