@@ -1,4 +1,5 @@
 == Debugging
 
 include::jdb.adoc[]
-
+include::diagnose.adoc[]
+include::profiling.adoc[]

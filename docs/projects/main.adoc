@@ -15,6 +15,8 @@ Partly to not reinvent the wheel again, and partly due to the tight integration 
 
 === Creating a New Project
 
+The `golo` program provides a `new` command that ease the initialization of new projects.
+
 In the following, we will limit the explanations to Gradle, as it is the tool used by the Golo project itself.
 
 
@@ -29,7 +31,7 @@ https://github.com/eclipse/golo-lang/issues/442
 
 ==== From a Local Project
 
-[source]
+[source,groovy]
 ----
 dependencies {
   compile fileTree (dir: 'jars', includes: ['my-lib-0.1.0.jar'])

@@ -7,7 +7,7 @@ For instance, one can use a JDWP agent to inspect a Golo program while running.
 
 [source,bash]
 ----
-$ export GOLO_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,address=6666,suspend=y"
+$ export GOLO_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,address=5005,suspend=y"
 $ golo golo --files mymodule.golo
 ----
 
@@ -25,11 +25,14 @@ $ golo compile mymodule.golo
 $ golo-debug run --module MyModule
 ----
 
+[NOTE]
+When using Gradle to manage the project, the command `gradle run --debug-jvm` can be used in place of `golo-debug`.
+
 In another terminal, running
 
 [source,bash]
 ----
-$ rlwrap jdb -sourcepath . -attach 6666
+$ rlwrap jdb -sourcepath . -attach 5005
 ----
 
 will drop you in the command-line debugger that allows inspection and debugging of your Golo program. You can use `jdb` to run Golo programs step-by-step, set breakpoint and inspect program state.
@@ -37,4 +40,13 @@ will drop you in the command-line debugger that allows inspection and debugging 
 [NOTE]
 The `rlwrap` command is just a wrapper around the readline library. It provides line editing and history of commands, which can be very convenient.
 
+Of course, graphical debuggers can also be plugged in the running process.
+
+==== Break Points
+
+==== Inspecting states
+
+==== Moving forward
+
+Please refer to the http://docs.oracle.com/javase/8/docs/technotes/tools/windows/jdb.html[JDB documentation] for a more comprehensive usage description.
 

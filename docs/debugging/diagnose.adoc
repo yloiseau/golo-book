@@ -1,0 +1,12 @@
+
+=== Inspecting generated code
+
+==== AST and IR
+
+`golo diagnose`
+
+==== JVM Bytecode
+
+`javap -verbose -l -private -c -s -constants`
+
+
