@@ -2,8 +2,12 @@
 
 http://golo-lang.org/download/
 
-==== From source
+==== By Hand
+
+See https://gist.github.com/k33g/9cf6dc4f3928b457acd7c22af187ce2b
 
 ==== On macOS
 
 ==== On Windows
+
+==== From source

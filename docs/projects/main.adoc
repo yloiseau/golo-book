@@ -1,8 +1,38 @@
 == Project Management
 
-Many modern languages come with a dedicated, or _de facto_ standard, build and dependency management tool.
+Ideas:
+https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md
+http://doc.crates.io/guide.html
+https://swift.org/package-manager/
+
+
+Many modern languages come with a dedicated, and _de facto_ standard, build and dependency management tool.
 https://www.rust-lang.org/[Rust] has http://doc.crates.io/[Cargo],
 https://clojure.org/[Clojure] has https://leiningen.org/[Leiningen],
 https://www.haskell.org/[Haskell] has https://www.haskell.org/cabal/[Cabal], and so on.
 
 Partly to not reinvent the wheel again, and partly due to the tight integration with the Java ecosystem, Golo has chosen to leverage tools existing in the Java world: Golo plug-ins for both https://maven.apache.org/[Apache Maven] and https://gradle.org/[Gradle].
+
+=== Creating a New Project
+
+In the following, we will limit the explanations to Gradle, as it is the tool used by the Golo project itself.
+
+
+=== Managing Dependencies
+
+==== From an Artefact Repository
+
+==== From a git Source Repository
+
+http://stackoverflow.com/questions/18748436/is-it-possible-to-declare-git-repository-as-dependency-in-android-gradle
+https://github.com/eclipse/golo-lang/issues/442
+
+==== From a Local Project
+
+[source]
+----
+dependencies {
+  compile fileTree (dir: 'jars', includes: ['my-lib-0.1.0.jar'])
+}
+----
+
