@@ -27,7 +27,6 @@ dependencies {
   golo 'org.eclipse.golo:golo:3.1.0'
 }
 
-task wrapper(type: Wrapper) {
+wrapper {
   gradleVersion = '3.4'
-  description 'Generates the Gradle wrapper scripts.'
 }
