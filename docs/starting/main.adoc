@@ -1,3 +1,5 @@
 == Getting Started
 
 include::installing.adoc[]
+include::simple-program.adoc[]
+

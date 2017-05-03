@@ -1,0 +1,8 @@
+=== A Simple Program
+
+Let's start with the traditional “Hello World” program:
+
+[source,golo]
+----
+include::src/main/golo/hello.golo[]
+----
